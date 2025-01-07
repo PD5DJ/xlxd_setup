@@ -168,7 +168,7 @@ sudo update-rc.d xlxd defaults
 **This hash file is linked to your XLX number**
 
 
-## Copy Dashboard & restore own configuration of dashboard to /var/www/dashboard/
+## Copy Dashboard to /var/www/dashboard/
 ```
 sudo cp -r ~/xlxd/dashboard /var/www
 sudo chmod 755 -R /var/www/dashboard/
