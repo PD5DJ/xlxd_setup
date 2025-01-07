@@ -172,10 +172,12 @@ sudo update-rc.d xlxd defaults
 **This hash file is linked to your XLX number**
 
 
-## Copy Dashboard to /var/www/dashboard/
+## Copy Dashboard to /var/www/dashboard/ & Change ownership Dashboard and XLXD program folder to www-data
 ```
 sudo cp -r ~/xlxd/dashboard /var/www
 sudo chmod 755 -R /var/www/dashboard/
+sudo chown -R www-data:www-data /var/www/dashboard/
+sudo chown -R www-data:www-data /xlxd/
 sudo sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/dashboard|' /etc/apache2/sites-available/000-default.conf
 sudo systemctl restart apache2
 sudo service xlxd start
@@ -278,14 +280,6 @@ if (file_exists("../config.inc.php")) {
 
 ?>
 ```
-
-
-# Change ownership Dashboard and XLXD program folder to www-data
-```
-sudo chown -R www-data:www-data /var/www/dashboard/
-sudo chown -R www-data:www-data /xlxd/
-```
-
 
 # [ Download dmrid.dat from XLXAPI server ]
 ```
