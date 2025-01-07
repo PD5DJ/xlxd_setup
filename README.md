@@ -141,7 +141,7 @@ git clone https://github.com/LX3JL/xlxd.git
 **Next step:**
 **Configure xlxd service with your XLX server number and XLX server host ip address**
 
-*example:*
+***example:***
 
 XLX Server Number: **123**
 
@@ -167,17 +167,10 @@ sudo update-rc.d xlxd defaults
 
 **This hash file is linked to your XLX number**
 
-## (Optional)
-**Restore XLXD hash file and xlxd settings, this is only needed if you restore your xlxd setup**
-```
-sudo cp ~/XLXSETUP/xlxd/* /xlxd/
-sudo chmod 755 -R /xlxd
-```
 
 ## Copy Dashboard & restore own configuration of dashboard to /var/www/dashboard/
 ```
 sudo cp -r ~/xlxd/dashboard /var/www
-sudo cp -r ~/XLXSETUP/dashboard/* /var/www/dashboard/
 sudo chmod 755 -R /var/www/dashboard/
 sudo sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/dashboard|' /etc/apache2/sites-available/000-default.conf
 sudo systemctl restart apache2
@@ -390,12 +383,6 @@ sudo nano ~/DMRBot/openai_api_key.txt
 ```
 ***Now Copy and Paste and save your API key***
 
-**OR**
-
-**Copy back stored API key**
-```
-sudo cp ~/XLXSETUP/DMRBot/openai_api_key.txt ~/DMRBot
-```
 
 **Adjust configuration and Compile DMRBot**
 ```
