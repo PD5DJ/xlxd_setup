@@ -124,7 +124,7 @@ sudo systemctl restart networking
 
 # [ Install GIT, Apache, PHP and various tools ]
 ```
-sudo apt-get install git git-core apache2 php libapache2-mod-php php-cli php-xml php-mbstring php-curl build-essential -y
+sudo apt-get install git git-core apache2 php libapache2-mod-php php-cli php-xml php-mbstring php-curl build-essential make gcc -y
 ```
 
 **Set PHP Timezone correctly, pay attention to the php version**
@@ -277,6 +277,13 @@ if (file_exists("../config.inc.php")) {
 }   
 
 ?>
+```
+
+
+# Change ownership Dashboard and XLXD program folder to www-data
+```
+sudo chown -R www-data:www-data /var/www/dashboard/
+sudo chown -R www-data:www-data /xlxd/
 ```
 
 
