@@ -1,4 +1,8 @@
-# XLXD Server Setup XLX123
+# XLXD Server Setup
+
+## Check for availability of a free XLX server number: https://www.pistar.uk/downloads/XLXHosts.txt
+
+## For now we use XLX123 as an example
 
 ## Credentials
 
@@ -295,9 +299,7 @@ cd ~
 ```
 
 ## Add PEER to xlxd.interlink
-```
-sudo nano /xlxd/xlxd.interlink
-```
+
 ***Example:***
 - Peer name: **ECHO**
 - Peer host: **127.0.0.1**
@@ -305,7 +307,7 @@ sudo nano /xlxd/xlxd.interlink
 
 Add **ECHO 127.0.0.1 I**
 ```
-ECHO 127.0.0.1 I
+echo "ECHO 127.0.0.1 I" | sudo tee -a /xlxd/xlxd.interlink
 ```
 
 
