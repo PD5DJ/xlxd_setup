@@ -1,6 +1,6 @@
 # XLXD Server Setup
 
-## Check for availability of a free XLX server number 001 - 999: https://www.pistar.uk/downloads/XLXHosts.txt
+## Check for availability of a free XLX server number (001 - 999): https://www.pistar.uk/downloads/XLXHosts.txt
 
 ## For now we use XLX123 as an example
 
