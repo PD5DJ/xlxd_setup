@@ -1,4 +1,4 @@
-# XLXD Server Setup XLX880
+# XLXD Server Setup XLX123
 
 ## Credentials
 
@@ -6,7 +6,7 @@
 - STATIC IP: **192.168.1.15**
 - GATEWAY IP: **192.168.1.1**
 - DNS SERVER: **192.168.1.1**
-- XLX REFLECTOR: **XLX880**
+- XLX REFLECTOR: **XLX123** (Example)
 
 
 ## Opening and forwarding ports on router:
@@ -143,7 +143,7 @@ git clone https://github.com/LX3JL/xlxd.git
 
 *example:*
 
-XLX Server Number: **880**
+XLX Server Number: **123**
 
 XLX Server IP: **192.168.1.15**
 
@@ -153,7 +153,7 @@ make clean
 sudo make
 sudo make install
 sudo cp ~/xlxd/scripts/xlxd /etc/init.d/xlxd
-sudo sed -i 's|ARGUMENTS="XLX999 192.168.1.240 127.0.0.1"|ARGUMENTS="XLX880 192.168.1.15 127.0.0.1"|' /etc/init.d/xlxd
+sudo sed -i 's|ARGUMENTS="XLX999 192.168.1.240 127.0.0.1"|ARGUMENTS="XLX123 192.168.1.15 127.0.0.1"|' /etc/init.d/xlxd
 cd ~
 ```
 
@@ -305,6 +305,7 @@ cd ~
 ```
 sudo nano /xlxd/xlxd.interlink
 ```
+***Example:***
 - Peer name: **ECHO**
 - Peer host: **127.0.0.1**
 - Peer Module: **I**
@@ -417,7 +418,7 @@ sudo apt install screen
 ***Important!, Copy and paste this block in its entirety!***
 ```
 crontab -l > mycron
-echo "@reboot screen -dmS dmrbot /home/xlxserver/DMRBot/xrfbot DVBOT XRF880:J:192.168.1.15:30001 192.168.1.15:2460" >> mycron
+echo "@reboot screen -dmS dmrbot /home/xlxserver/DMRBot/xrfbot DVBOT XRF123:J:192.168.1.15:30001 192.168.1.15:2460" >> mycron
 crontab mycron
 rm mycron
 ```
