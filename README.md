@@ -179,6 +179,7 @@ sudo chmod 755 -R /var/www/dashboard/
 sudo chown -R www-data:www-data /var/www/dashboard/
 sudo chown -R www-data:www-data /xlxd/
 sudo sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/dashboard|' /etc/apache2/sites-available/000-default.conf
+sudo mv /var/log/xlxd.pid /var/log/xlxd.xml
 sudo systemctl restart apache2
 sudo service xlxd start
 ```
