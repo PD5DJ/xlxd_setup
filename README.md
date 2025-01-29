@@ -388,6 +388,18 @@ sudo nano ~/DMRBot/openai_api_key.txt
 ***Now Copy and Paste and save your API key***
 
 
+**OpenWeather API Key**
+
+You will need an OpenWeather API key to retreive weahter information. You can register and get an API key for free here: https://home.openweathermap.org/users/sign_up
+
+It has to be stored in: **~/DMRBot/openweathermap_api_key.txt**
+
+```
+sudo nano ~/DMRBot/openweathermap_api_key.txt
+```
+***Now Copy and Paste and save your API key***
+
+
 **Adjust configuration and Compile DMRBot**
 ```
 cd ~/DMRBot
